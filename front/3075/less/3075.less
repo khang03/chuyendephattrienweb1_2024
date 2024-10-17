@@ -1,0 +1,262 @@
+
+@color_link:  #03a9f4;
+@color_mess: #f0f0f0;
+@mobile-width-media: 768px;
+@tablet-width-media: 1308px;
+
+
+.type-3075{
+    width: 100%;
+    background-image: url(../page-title-bg-1.jpg);
+        background-size: cover;
+        background-position: 0 -500px;
+        background-repeat: no-repeat;
+    body{
+        margin: 0;
+        font-family: sans-serif;
+        
+    }
+    input:focus{
+        outline: none;
+    }
+    
+    .wrapper{
+        width: 100%;
+
+        .header_content{
+            height: 200px;
+            width: 100%;
+            background-color: rgba(41, 41, 41, 0.674);
+            text-align: center;
+            padding-top: 50px;
+
+            .tittle_content{
+                position: relative;
+                color: white;
+            }
+
+            .tittle_content::before{
+                content: "";
+                width: 50px;
+                height: 1.5px;
+                background-color: @color_link;
+                position: absolute;
+                top: 110%;
+                left: calc(50% - 1.5px);
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    .info_page{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .container{
+        width: 100%;
+        height: 600px;
+        background-color: aliceblue;
+        display: flex;
+    }
+    .contact_info{
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+        .content_info{
+            height: 100%;
+            width: fit-content;
+            padding: 50px 0 0 150px;
+
+            .tittle_contact{
+                position: relative;
+                margin-bottom: 30px;
+            }
+            .tittle_contact::before{
+                content: "";
+                width: 50px;
+                height: 1.5px;
+                background-color: @color_link;
+                position: absolute;
+                top: 110%;
+                left: 0;
+            }
+
+            p{
+                line-height: 50px;
+                color: #403f3f;
+
+                .fa-home, .fa-envelope, .fa-envelope, .fa-phone, .fa-fax{
+                    border: 1px solid #403f3f;
+                    height: 30px;
+                    width: 30px;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 6px 0;
+                }
+                
+
+                
+            }
+            .icon_link{
+                margin-top: 20px;
+                width: 100%;
+                ul{
+                    width: 100%;
+                    display: flex;
+                    margin-left: -40px;
+
+                    li{
+                        margin-left: 10px;
+                        list-style: none;
+                        a{
+                            color: #403f3f;
+                            i{
+                                border: 1px solid #403f3f;
+                                height: 30px;
+                                width: 30px;
+                                text-align: center;
+                                padding: 8px 0;
+                            }
+                        }
+                        a:hover{
+                            color: #fff;    
+                        }
+                    }
+                    .li1{
+                        margin-left: 0;
+                    }
+                    .li_link:hover{
+                        background-color: #03a9f4;
+
+                    }
+                }   
+            }
+
+        }
+        
+    }
+    
+
+    .mess{
+        width: 50%;
+        height: 100%;
+        padding: 70px 70px 0 70px;
+        background-color: @color_mess;
+        input{
+            border-color: #ffffff00; 
+            height: 30px;
+     }
+        .name_mail{
+            width: 100%;
+            input:nth-child(2){
+                margin-left: 20px;
+            }
+            input{
+                width: 48%;
+            }
+            
+        }
+        
+        .subject{
+            width: 100%;
+            margin-top: 20px;
+            input{
+                width: 100%;
+                height: 30px;
+            }
+        }
+        .Message{
+            width: 100%;
+            margin-top: 20px;
+            input{
+                width: 100%;
+                height: 200px;
+            }
+        }
+        button{
+            border: 0;
+            width: 50px;
+            height: 30px;
+            background-color: #03a9f4;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: @mobile-width-media) {
+        
+    }
+
+    //-------------Màn hình tablet--------------------------
+
+    
+@media (max-width: @tablet-width-media) and (min-width: @mobile-width-media) {
+    .container{
+        height: 600px;
+        .contact_info{
+            .content_info{
+                padding: 50px 50px;
+            }
+        }
+        .mess{
+            background-color: @color_mess;
+            .name_mail{
+                input{width: 100%;}
+                .email{
+                    margin: 20px 20px 0 0;
+                    
+                    
+                }
+            }
+        }
+    }
+}
+
+//-------------Màn hình mobile--------------------------
+
+@media (max-width: @mobile-width-media) {  
+    .container{
+        display: block;
+        height: 1200px;
+        
+        .contact_info{
+            width: 100%;
+            height: 600px;
+            .content_info{
+                padding: 50px 0 0 0;
+            }
+        }
+        .mess{
+            height: 600px;
+            width: 100%;
+            background-color: @color_mess;
+            padding: 50px 20px;
+            .name_mail{
+                display: block;
+                .email{
+                    margin-top: 20px;
+                }
+                
+            }
+            .name_mail input{
+                width: 100%;
+                margin: 0;
+            }
+            
+            
+        }
+    }
+    
+}
+
+    
+}
+
